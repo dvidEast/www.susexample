@@ -13,7 +13,14 @@ Repository for an example version of the UBC Science Undergraduate Society websi
 ### Unique Features
 - fully functioning shop for SUS merchandise
 - automatic uploading of meeting minutes through the google docs API
+<<<<<<< HEAD
 - 
+=======
+
+
+# Next.js
+
+>>>>>>> 12e07c0 (first commit)
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
