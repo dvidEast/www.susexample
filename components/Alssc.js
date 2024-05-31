@@ -26,12 +26,12 @@ const Background = styled.div`
 const Title = styled.div`
     font-size: 37px;
     font-weight: bold;
-    color: #001961;
+    color: #fff;
     margin-bottom: 2rem;
 `
 
 const Subtitle = styled.div`
-    color: black;
+    color: white;
     font-size: 20px;  
     margin-bottom: 3rem;
 `
@@ -57,7 +57,7 @@ const Booking = styled.div`
 `
 
 const BookingTitle = styled.div`
-    color: black;
+    color: white;
     font-size: 20px;  
     margin-bottom: 1rem;
     line-height: 2;

@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import Link from 'next/link';
 
 export default function GetInvolved() {
     return (
         <Background>
-            {/* <Title>Get Involved</Title> */}
+            <Title>Get Involved</Title>
             <StyledButton href="/">Back to Home</StyledButton>
         </Background>
     )

@@ -83,7 +83,7 @@ const Graphic = styled.img`
     border: none;
     border-radius: 0;
     transition: opacity 1s ease-in-out;
-    box-shadow: 0 0 60px rgba(0, 25, 97, 0.7); /* Subtle border glow */
+    box-shadow: 0 0 60px rgba(0, 25, 97, 0.5); /* Subtle border glow */
 `;
 
 const Title = styled.div`

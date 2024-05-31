@@ -26,7 +26,7 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faSpotify} />
             </a>
             <a
-                href='https://www.youtube.com/c/susubc'
+                href='https://www.youtube.com/user/SUSUBC1915'
                 target='_blank'
                 rel='noreferrer'
             >
@@ -50,25 +50,28 @@ export default function Footer() {
     );
   }
 
-  const FooterContainer = styled.footer`
-  background-size: cover;
-  color: #ffffff;
-  text-align: center;
-  padding: 64px 0;
-  width: 100%;
+const FooterContainer = styled.footer`
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 64px 0;
+    width: 100%;
 `;
 
 const SocialMediaIcons = styled.div`
   font-size: 32px;
   margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   a {
     color: white;
     width: 30px;
-    height: 100%;
+    height: 19%;
     margin: 0 32px;
     transition: color 200ms;
-    font-size: 1.5em; // Adjust the icon size here
+    font-size: 1em; // Adjust the icon size here
   }
 `;
 

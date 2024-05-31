@@ -54,20 +54,24 @@ const Home = () => {
             <About />
           </Section>
 
-          <Section ref={(el) => (sectionRefs.current[3] = el)} style={{ backgroundColor: "rgba(255, 255, 255, 0.6)" }}>
+          <Section ref={(el) => (sectionRefs.current[2] = el)} >
             <Alssc />
           </Section>
 
-          <Section ref={(el) => (sectionRefs.current[4] = el)} style={{ backgroundColor: "rgba(255, 255, 255, 0.6)" }}>
+          <Section ref={(el) => (sectionRefs.current[3] = el)} style={{ backgroundColor: "rgba(255, 255, 255, 0.6)" }}>
             <GetInvolved />
           </Section>
 
-          <Section ref={(el) => (sectionRefs.current[2] = el)} style={{ backgroundColor: "rgba(255, 255, 255, 0.6)" }}>
+          <Section ref={(el) => (sectionRefs.current[4] = el)}>
             <Podcast />
           </Section>
+
+          <Section ref={(el) => (sectionRefs.current[5] = el)} style={{ backgroundColor: "rgba(255, 255, 255, 0.6" }}>
+            
+          </Section>
+
+          <Footer />
         </Content>
-        
-        <Footer />
       </Background>
     </>
   );
@@ -99,7 +103,7 @@ const Section = styled.div`
 
   height: 80vh; 
   margin-top: 10vh;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
