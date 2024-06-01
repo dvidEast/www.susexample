@@ -16,11 +16,21 @@ export default function Alssc() {
     )
 }
 
+const breakpoints = {
+    mobile: '768px',
+    tablet: '1024px',
+};
+
 const Background = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        padding: 0.5rem;
+    }
 `
 
 const Title = styled.div`
@@ -28,25 +38,46 @@ const Title = styled.div`
     font-weight: bold;
     color: #fff;
     margin-bottom: 2rem;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        font-size: 28px;
+        margin-bottom: 1.5rem;
+    }
 `
 
 const Subtitle = styled.div`
     color: white;
     font-size: 20px;  
     margin-bottom: 3rem;
+    text-align: center;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        font-size: 16px;
+        margin-bottom: 2rem;
+    }
 `
 
 const SubSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        flex-direction: column;
+    }
 `
 
 const Frame = styled.iframe`
     margin-bottom: 3rem;
     margin-right: 1rem;
-`;
 
+    @media (max-width: ${breakpoints.mobile}) {
+        margin-bottom: 1rem;
+        margin-right: 0;
+        width: 100%;
+    }
+`
 
 const Booking = styled.div`
     display: flex;
@@ -54,6 +85,12 @@ const Booking = styled.div`
     justify-content: center;
     flex-direction: column;
     margin-left: 1rem;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
 `
 
 const BookingTitle = styled.div`
@@ -62,6 +99,11 @@ const BookingTitle = styled.div`
     margin-bottom: 1rem;
     line-height: 2;
     text-align: center;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+    }
 `
 
 const pulse = keyframes`
@@ -85,5 +127,9 @@ const BookingButton = styled.button`
     &:hover {
         background-color: #0357a9;
         animation: ${pulse} 1.2s ease-in-out infinite;
+    }
+
+    @media (max-width: ${breakpoints.mobile}) {
+        padding: 10px 30px;
     }
 `

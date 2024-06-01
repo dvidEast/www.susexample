@@ -14,9 +14,19 @@ export default function GetInvolved() {
         <Titles>
             <Title>Get Involved</Title>
             <Subtitle>
-                <PositionLink 
-                    href="https://docs.google.com/document/d/1ca6Tsa4BK0e6NhS5Yq7xsYRVf0EBEm-49FTIC740XNg/edit">Click here </PositionLink>
-                to learn about all the <span style={{textDecoration: "underline"}}>year-round</span> portfolios, committees, and positions!</Subtitle>
+                <PositionLink href="https://docs.google.com/document/d/1ca6Tsa4BK0e6NhS5Yq7xsYRVf0EBEm-49FTIC740XNg/edit">Click here </PositionLink>
+                to learn about all the <span style={{textDecoration: "underline"}}>year-round</span> portfolios, committees, and positions!
+            </Subtitle>
+
+            <Subtitle>
+                <PositionLink href="https://docs.google.com/document/d/1ca6Tsa4BK0e6NhS5Yq7xsYRVf0EBEm-49FTIC740XNg/edit">Click here </PositionLink>
+                to learn more about the different <span style={{textDecoration: "underline"}}>one-time-experience</span> positions!
+            </Subtitle>
+
+            <Subtitle>
+                <PositionLink href="https://docs.google.com/document/d/1ca6Tsa4BK0e6NhS5Yq7xsYRVf0EBEm-49FTIC740XNg/edit">Click here </PositionLink>
+                to learn more about SUS' <span style={{textDecoration: "underline"}}>organizational</span> structure.
+            </Subtitle>
         </Titles>
 
         <DropdownMenu>
@@ -43,16 +53,16 @@ export default function GetInvolved() {
             </DropContent>
           </DropItem>
         </DropdownMenu>
-
-        <MoreInfo>
-            <MoreInfoTitle>To learn more about our <span>one-time-experience</span> positions </MoreInfoTitle>
-            <MoreInfoButton>Room Booking</MoreInfoButton>
-        </MoreInfo>  
       </Content>
       <Graphic src="/images/join-sus.webp" />
     </Background>
   );
 }
+
+const breakpoints = {
+    mobile: '768px',
+    tablet: '1024px',
+};
 
 const Background = styled.div`
   display: flex;
@@ -62,6 +72,11 @@ const Background = styled.div`
   width: 100%;
   height: 100%;
   color: white;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    flex-direction: column;
+    padding: 2rem;
+  }
 `;
 
 const Graphic = styled.img`
@@ -75,14 +90,27 @@ const Graphic = styled.img`
   transition: opacity 1s ease-in-out;
   box-shadow: 0 0 60px rgba(0, 25, 97, 0.5); /* Subtle border glow */
   margin-left: 2rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 50%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
 `;
 
 const Content = styled.div`
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-direction: column;
   margin-right: 2rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    margin-right: 0;
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 const Titles = styled.div`
@@ -91,21 +119,31 @@ const Titles = styled.div`
 const Title = styled.div`
   font-size: 37px;
   color: #001961;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 28px;
+    text-align: center;
+  }
 `;
 
 const Subtitle = styled.div`
-    font-size: 20px;
-    color: #000;
-    text-align: left;
-    margin-bottom: 1rem;
-`
+  font-size: 20px;
+  color: #000;
+  text-align: left;
+  margin-bottom: 1rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 18px;
+    text-align: center;
+  }
+`;
 
 const PositionLink = styled.a`
-    text-decoration: none;
-    color: #046fe2;
-`
+  text-decoration: none;
+  color: #046fe2;
+`;
 
 const DropdownMenu = styled.div`
   width: 100%;
@@ -116,13 +154,17 @@ const DropItem = styled.div`
 `;
 
 const DropItemHead = styled.div`
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    color: black;
-    padding: 10px;
-    border-bottom: 1px solid black;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: black;
+  padding: 10px;
+  border-bottom: 1px solid black;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 18px;
+  }
 `;
 
 const DropContent = styled.div`
@@ -134,6 +176,11 @@ const DropContent = styled.div`
   background-color: none;
   color: #000;
   border-radius: 5px;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 14px;
+    padding: ${(props) => (props.open ? '10px' : '0')};
+  }
 `;
 
 const Arrow = styled.div`
@@ -146,23 +193,14 @@ const Arrow = styled.div`
   margin-right: 10px;
   transition: transform 0.3s;
   transform: ${(props) => (props.open ? 'rotate(180deg)' : 'rotate(0deg)')};
+
+  @media (max-width: ${breakpoints.mobile}) {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: ${(props) => (props.open ? '0' : '6px solid black')};
+    border-bottom: ${(props) => (props.open ? '6px solid black' : '0')};
+  }
 `;
-
-const MoreInfo = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 1rem;
-`
-
-const MoreInfoTitle = styled.div`
-    color: white;
-    font-size: 20px;  
-    margin-bottom: 1rem;
-    line-height: 2;
-    text-align: center;
-`
 
 const pulse = keyframes`
     0% {
@@ -173,7 +211,6 @@ const pulse = keyframes`
     }
     100% {
         transform: scale(1);
-    }
 `
 
 const MoreInfoButton = styled.button`
@@ -185,5 +222,9 @@ const MoreInfoButton = styled.button`
     &:hover {
         background-color: #0357a9;
         animation: ${pulse} 1.2s ease-in-out infinite;
+    }
+
+    @media (max-width: ${breakpoints.mobile}) {
+      padding: 10px 30px;
     }
 `

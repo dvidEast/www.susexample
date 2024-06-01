@@ -16,7 +16,7 @@ const sections = [
     name: "About Us",
     href: "",
     items: [
-      { name: "The Executives", href: "//" },
+      { name: "The Executives", href: "/" },
       { name: "Budget", href: "/" },
       { name: "Code & Procedures", href: "/" },
       { name: "Office Hours", href: "/" }
@@ -26,38 +26,37 @@ const sections = [
     name: "Our Events",
     href: "",
     items: [
-      { name: "Item A", href: "/itemA" },
-      { name: "Item B", href: "/itemB" },
+      { name: "Upcoming Events", href: "/" },
+      { name: "Past Events", href: "/" },
     ],
   },
   {
     name: "Student Services",
     href: "",
     items: [
-      { name: "Item A", href: "/itemA" },
-      { name: "Item B", href: "/itemB" },
+      { name: "Blue Card Program", href: "/" },
+      { name: "Grants", href: "/" },
+      { name: "Volunteer Portal", href: "/"},
+      { name: "Study Sphere", href: "/"},
     ],
   },
   {
     name: "Science Student Centre",
     href: "",
     items: [
-      { name: "Item A", href: "/itemA" },
-      { name: "Item B", href: "/itemB" },
+      { name: "About the ALSSC", href: "/" },
+      { name: "Book a Meeting Room", href: "/" },
     ],
+  },
+  {
+    name: "Give us Feedback",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSeoybfzo-4VZgMUgie-eySFPczi_ToTwugPDu8F-IPLoS04Wg/viewform",
+    items: [],
   },
   {
     name: "Shop",
     href: "/shop",
     items: [],
-  },
-  {
-    name: "Feedback",
-    href: "",
-    items: [
-      { name: "Item A", href: "/itemA" },
-      { name: "Item B", href: "/itemB" },
-    ],
   },
 ];
 
@@ -172,7 +171,7 @@ const DropdownMenu = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(40px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;

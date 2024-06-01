@@ -10,6 +10,11 @@ const Hero = () => {
     );
 };
 
+const breakpoints = {
+    mobile: '768px',
+    tablet: '1024px',
+};
+
 const BackgroundContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,6 +23,11 @@ const BackgroundContainer = styled.div`
   height: 100vh;
   width: 100%;
   position: relative;
+  padding: 2rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: 1rem;
+  }
 `;
 
 const Subtitle = styled.div`
@@ -25,16 +35,25 @@ const Subtitle = styled.div`
   font-size: 1.9rem;  
   text-align: center;
   z-index: 2;
-`
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 1.5rem;
+  }
+`;
 
 const Subtitle2 = styled.div`
   color: white;
   font-size: 1.2rem;  
-  fomt-weight: normal;
+  font-weight: normal;
   text-align: center;
   z-index: 2;
   margin-top: 2rem;
-`
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+`;
 
 const Logo = styled.img`
   width: 600px;
@@ -43,6 +62,12 @@ const Logo = styled.img`
   z-index: 2;
   margin-top: 10rem;
   margin-bottom: 3rem;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 80%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export default Hero;

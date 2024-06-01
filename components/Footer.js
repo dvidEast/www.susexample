@@ -19,6 +19,13 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a
+                href='https://www.facebook.com/susubc'
+                target='_blank'
+                rel='noreferrer'
+            >
+                <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a
                 href='https://open.spotify.com/show/6LvV59dTsORiXSn4z28Zon?si=0f45da7172b94df9'
                 target='_blank'
                 rel='noreferrer'
@@ -31,13 +38,6 @@ export default function Footer() {
                 rel='noreferrer'
             >
                 <FontAwesomeIcon icon={faYoutube} />
-            </a>
-            <a
-                href='https://www.facebook.com/susubc'
-                target='_blank'
-                rel='noreferrer'
-            >
-                <FontAwesomeIcon icon={faFacebook} />
             </a>
         </SocialMediaIcons>
         <Links>

@@ -7,6 +7,7 @@ import About from "../components/About";
 import Alssc from "../components/Alssc";
 import GetInvolved from "../components/GetInvolved";
 import Podcast from "../components/Podcast"
+import Shop from "../components/Shop";
 
 const Home = () => {
   const sectionRefs = useRef([]);
@@ -67,7 +68,7 @@ const Home = () => {
           </Section>
 
           <Section ref={(el) => (sectionRefs.current[5] = el)} style={{ backgroundColor: "rgba(255, 255, 255, 0.6" }}>
-            
+            <Shop /> 
           </Section>
 
           <Footer />
