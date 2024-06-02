@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
+import { Button } from "./Reusable";
 
 const images = [
     "/images/Shop_files/Black-Crew-1.png",
@@ -44,7 +45,7 @@ export default function Shop() {
             <Description>
                 Checkout the styles from Spring 2024 ↓↓↓ 
             </Description>
-            <BookingButton href="/shop">Shop Spring 2024</BookingButton>
+            <Button as="a" href="/shop">Shop Spring 2024</Button>
         </Background>
     );
 }
@@ -99,18 +100,5 @@ const pulse = keyframes`
     }
     100% {
         transform: scale(1);
-    }
-`
-
-const BookingButton = styled.button`
-    border: none;
-    border-radius: 7px;
-    background-color: #046bd2;
-    color: white;
-    padding: 15px 50px;
-    &:hover {
-        background-color: #0357a9;
-        animation: ${pulse} 1.2s ease-in-out infinite;
-        cursor: pointer;
     }
 `

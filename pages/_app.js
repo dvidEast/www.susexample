@@ -17,10 +17,10 @@ export default function MyApp ({ Component, pageProps }) {
           key="ogdescription"  ddid  tr
           
         />
-        <meta property="og:image" content="/path/to/your/image.jpg" key="ogimage" />
-        <meta property="og:url" content="https://www.yourwebsite.com" key="ogurl" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <meta property="og:image" content="/path/to/your/image.jpg" key="ogimage" /> */}
+        {/* <meta property="og:url" content="https://www.yourwebsite.com" key="ogurl" /> */}
+        {/* <link rel="icon" href="/faviconWhite.ico" /> */}
+        <link rel="icon" href="/images/logos/blue-logo.tif" />
       </Head>
       <Component {...pageProps} />
     </>

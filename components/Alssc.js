@@ -1,4 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { Button } from "./Reusable"
 
 export default function Alssc() {
     return (
@@ -9,7 +10,7 @@ export default function Alssc() {
                 <Frame width="560" height="315" src="https://www.youtube.com/embed/t-kc4Bppv2I?si=8kjHKUHZ9ZZhmQMy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></Frame>
                 <Booking>
                     <BookingTitle>Have a meeting? Need a study space for you and your friends? <br/>Students can book with the link below ↓↓↓</BookingTitle>
-                    <BookingButton>Room Booking</BookingButton>
+                    <Button as="a" href="/bookings">Room Booking</Button>
                 </Booking>  
             </SubSection>
         </Background>   
@@ -103,33 +104,5 @@ const BookingTitle = styled.div`
     @media (max-width: ${breakpoints.mobile}) {
         font-size: 16px;
         margin-bottom: 0.5rem;
-    }
-`
-
-const pulse = keyframes`
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-`
-
-const BookingButton = styled.button`
-    border: none;
-    border-radius: 7px;
-    background-color: #046bd2;
-    color: white;
-    padding: 15px 50px;
-    &:hover {
-        background-color: #0357a9;
-        animation: ${pulse} 1.2s ease-in-out infinite;
-    }
-
-    @media (max-width: ${breakpoints.mobile}) {
-        padding: 10px 30px;
     }
 `

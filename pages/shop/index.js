@@ -1,25 +1,21 @@
 import styled from "styled-components"
-import Link from "next/link"
-import Navbar from "../../components/Navbar"
+import ShopNavbar from "../../components/shop-components/ShopNavbar"
+import Footer from "../../components/Footer"
 
 export default function Shop() {
     return (
         <>  
-            <Navbar />
+            <ShopNavbar />
             <Background>
                 <Title>Welcome to the SUS Clothing Store!</Title>
                 <Home>Back Home</Home>
             </Background>
+            <Footer />
         </>
     )
 }
 
 const Background = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%
-    height: 100%
 `
 
 const Title = styled.div`

@@ -19,3 +19,7 @@ Repository for an example version of the UBC Science Undergraduate Society websi
 ### AVP Position Notes
 - add mailing list / more emphasis on mailing list
 - clean up linktree
+
+### Future Styling Notes
+- rem vs em vs px -> prio em for responsiveness
+- add more elements to Reusable.js to reduce duplicated code and improve abstraction
