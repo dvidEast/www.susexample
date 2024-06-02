@@ -1,6 +1,10 @@
 import { useState } from "react";
-import styled, { keyframes } from "styled-components";
-import { FaBars, FaTimes } from "react-icons/fa"; // Importing hamburger and close icons
+import styled from "styled-components";
+import {
+    faApplePay,
+    faCcStripe
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 // Section of the navbar
@@ -11,7 +15,10 @@ export default function ShopNavbar() {
   return (
     <Nav>
         <NavLink href={"/"}><Logo src="./images/logos/white-logo.png" alt="Logo" /></NavLink>
-        <Cart>Cart</Cart>
+        <Cart>
+            <p>Powered By</p>
+            <a><FontAwesomeIcon icon={faCcStripe} /></a>
+        </Cart>
     </Nav>
   );
 }
@@ -44,7 +51,20 @@ const NavLink = styled.a`
     text-decoration: none;
 `;
 
-const Cart = styled.a`
-    color: white;
-    cursor: pointer;
+const Cart = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        color: white;
+        width: 35px;
+        transition: color 200ms;
+    }
+
+    p {
+        color: white;
+        margin-right: 10px;
+        font-size: 12px;
+    }
 `

@@ -50,8 +50,11 @@ const sections = [
   },
   {
     name: "Give us Feedback",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSeoybfzo-4VZgMUgie-eySFPczi_ToTwugPDu8F-IPLoS04Wg/viewform",
-    items: [],
+    href: "",
+    items: [
+      { name: "Feedback Form", href: "https://docs.google.com/forms/d/e/1FAIpQLSeoybfzo-4VZgMUgie-eySFPczi_ToTwugPDu8F-IPLoS04Wg/viewform" },
+      { name: "Future Improvements (for interview)", href: "/demo"}
+    ],
   },
   {
     name: "Shop",
