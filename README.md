@@ -1,5 +1,5 @@
 # www.susexample
-Repository for an example version of the UBC Science Undergraduate Society website
+Repository for an example version of the UBC Science Undergraduate Society website used for interview purposes.
 
 ### Highlights
 - prioritize join sus options -> website should be the hub for applications
